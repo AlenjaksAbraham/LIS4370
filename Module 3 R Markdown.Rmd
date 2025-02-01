@@ -1,0 +1,22 @@
+---
+title: "Module 3 R Markdown"
+output: html_document
+date: "2025-02-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Name <- c("Jeb", "Donald", "Ted", "Marco", "Carly", "Hillary", "Berine")
+
+ABC_political_poll_results <- c(4, 62, 51, 21, 2, 14, 15)
+
+CBS_political_poll_results <- c(12, 75, 43, 19, 1, 21, 19) 
+
+
+Presidential_election_poll_results <- data.frame(Name, ABC_political_poll_results, CBS_political_poll_results)
+
+print(Presidential_election_poll_results)
