@@ -1,0 +1,48 @@
+
+
+
+Frequency <- c(0.6,0.3,0.4,0.4,0.2,0.6,0.3,0.4,0.9,0.2)
+BP <- c(103,87,32,42,59,109,78,205,135,176)
+First <- c(1,1,1,1,0,0,0,0,NA,1)
+Second <- c(0,0,1,1,0,0,1,1,1,1)
+FinalDecision <- c(0,1,0,1,0,1,0,1,1,1)
+
+Hospital_Data <- data.frame(Frequency, BP, First, Second, FinalDecision)
+
+
+# boxplots
+par(mfrow=c(1,3))
+
+boxplot(BP ~ First, data=Hospital_Data, 
+        main="First assessment Blood Pressure",
+        xlab="First Doctor's Assessment (0=Good, 1=Bad)", 
+        ylab="Blood Pressure", 
+        col=c("orange", "purple"))
+
+
+boxplot(BP ~ Second, data=Hospital_Data, 
+        main="Second assessment Blood Pressure",
+        xlab="Second Doctor's Assessment (0=Good, 1=Bad)", 
+        ylab="Blood Pressure", 
+        col=c("orange", "purple"))
+
+boxplot(BP ~ FinalDecision, data=Hospital_Data, 
+        main="Final assessment Blood Pressure",
+        xlab="ER Unit Assessment (0=Low, 1=High)", 
+        ylab="Blood Pressure", 
+        col=c("orange", "purple"))
+
+
+
+# histogram
+par(mfrow=c(1,4))
+
+# Generate histograms for each variable
+
+hist(BP, main="Blood Pressure", col="lightgreen")
+hist(First, main="First Doctor's Assessment", col="lightblue")
+hist(Second, main="Second Doctor's Assessment", col="orange")
+hist(FinalDecision, main="ER Unit Assessment", col="purple")
+
+
+
