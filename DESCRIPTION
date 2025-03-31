@@ -1,0 +1,14 @@
+Package: Abraham
+Type: Package
+Title: video Game Sales 
+Version: 0.1.0
+Authors@R: Alen Abraham
+Description: As mentioned in the description, his package analyzes data from 
+#more than 16,500 games. With it, we are able to see information such as the 
+#platform of the game, year of release, genre, publisher, and sales from 
+#different regions. The intention is to see trends over time and the 
+#relationship between regions and sales.
+Depends: R (>= 3.1.2)
+License: CCO 1.0
+Encoding: UTF-8
+LazyData: true
